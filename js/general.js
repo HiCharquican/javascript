@@ -128,3 +128,111 @@ function propiedadesDinamicas(){
     console.log(objUsuarios);
 }
 
+function funcionTHIS(){
+    console.log(this);
+    console.log(window);
+
+    this.nombre = "Contexto Global";
+
+    console.log(this.nombre);
+
+    function imprimir (){
+        console.log(this.nombre);
+    }
+
+    imprimir();
+
+    const obj ={
+        nombre:"Contexto Objeto",
+        imprimir(){
+            console.log(this.nombre);
+        }
+    }
+
+    obj.imprimir();
+
+    const obj2 ={
+        nombre: "Contexto Objeto 2",
+        imprimir
+    }
+
+    obj2.imprimir();
+
+    const obj3 ={
+        nombre:"Contexto Objeto 3",
+        imprimir: () =>{
+            console.log(this.nombre)
+        }
+    }
+
+    obj3.imprimir();
+
+    function Persona(nombre){
+        this.nombre = nombre;
+        //return console.log(this.nombre);
+        return () => console.log(this.nombre,222);
+    }
+    let jon = new Persona("Jon");
+
+    jon();
+}
+
+function callApllyBind(){
+    console.log(this);
+    this.lugar = "Contexto Global";
+
+    function saludar(saludo, nombre){
+        console.log(`${saludo} ${nombre} desde el ${this.lugar}`);
+    }
+
+    saludar();
+
+    const obj={
+        lugar: "Contexto Objeto"
+    }
+
+    saludar.call(obj,"Hola","Miguel");
+    saludar.call(null,"Hola","Nulo call");
+    saludar.apply(obj, ["Adios","Pendic"]);
+    saludar.apply(null, ["Adios","Nulo apply"]);
+
+    this.nombre = "Windows";
+    const persona = {
+        nombre: "Miguel",
+        saludar(){
+            console.log(`Hola ${this.nombre}`);
+        }
+    }
+
+    persona.saludar();
+
+    const otraPersona = {
+        saludar: persona.saludar.bind(this)
+    }
+
+    otraPersona.saludar();
+
+}
+
+function json(){
+    const json = {
+        cadena: "Miguel",
+        numero: 22,
+        booleano: true,
+        arreglo: ["Volar","Correr","Nadar"],
+        objeto: {
+            twitter: "@indefinido",
+            email: "email@email.com"
+        },
+        nulo: null
+    }
+
+    console.log(json);
+
+    console.log(JSON);
+    console.log("{}");
+    console.log(JSON.parse("{}"))
+
+    console.log(JSON.stringify(json));
+}
+
