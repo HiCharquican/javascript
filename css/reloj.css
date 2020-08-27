@@ -1,0 +1,25 @@
+#reloj{
+    color: black;
+    background-color: blanchedalmond;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.btn-reloj-container{
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.btn-reloj{
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10%;
+}
+
+
+
