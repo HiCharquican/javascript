@@ -4,6 +4,7 @@ import { subir } from '/js/boton_subir.js';
 import { darkMode } from '/js/dark_mode.js';
 import { responsiveMedia } from '/js/objeto_responsive.js';
 import { responsiveTester } from '/js/prueba_responsive.js';
+import { detectarDispositivo } from '/js/deteccion_dispositivos.js';
 
 let $btnSubir = document.getElementById("btn-subir");
 
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", e =>{
     );
 
     responsiveTester("reponsive-tester");
+    detectarDispositivo("user-device");
 })
 
 document.addEventListener("click", e =>{

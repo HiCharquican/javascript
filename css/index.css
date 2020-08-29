@@ -19,7 +19,7 @@ article{
     text-align: center;
 }
 
-article h1{
+.titulo{
     background-color: yellow;
     text-align: center;
     padding: 1rem;
