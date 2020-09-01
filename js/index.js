@@ -5,6 +5,10 @@ import { darkMode } from '/js/dark_mode.js';
 import { responsiveMedia } from '/js/objeto_responsive.js';
 import { responsiveTester } from '/js/prueba_responsive.js';
 import { detectarDispositivo } from '/js/deteccion_dispositivos.js';
+import { networkStatus } from '/js/estado_conexion.js';
+import { webCam } from '/js/deteccion_webcam.js'
+import { getGeolocation } from './gelocalizacion.js';
+import { searchFilters } from './filtro_busqueda.js';
 
 let $btnSubir = document.getElementById("btn-subir");
 
@@ -18,7 +22,6 @@ document.addEventListener("DOMContentLoaded", e =>{
         $btnSubir.style.visibility = "hidden";
     }
 
-    darkMode("#btn-darkmode","data-dark");
     mostrarMenu();
     responsiveMedia(
         "youtube",
@@ -36,7 +39,13 @@ document.addEventListener("DOMContentLoaded", e =>{
 
     responsiveTester("reponsive-tester");
     detectarDispositivo("user-device");
+    webCam("webcam");
+    getGeolocation("geolocation")
+    searchFilters(".card-filter", ".card");
 })
+
+darkMode("#btn-darkmode","data-dark");
+networkStatus();
 
 document.addEventListener("click", e =>{
     if(e.target.id == "btn-iniciar-reloj"){

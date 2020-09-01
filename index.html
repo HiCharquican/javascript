@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/reloj.css">
+    <link rel="stylesheet" href="css/estado_conexion.css">
 </head>
 <body data-dark>
     <nav>
@@ -17,7 +18,10 @@
             <li class="nav-item"><a href="#seccion2" class="nav-item-link">Responsive Design</a></li>
             <li class="nav-item"><a href="#seccion3" class="nav-item-link">Responsive Terter</a></li>
             <li class="nav-item"><a href="#seccion4" class="nav-item-link">Detección de dispositivos</a></li>
-            <li class="nav-item"><a href="#" class="nav-item-link">Seccion 3</a></li>
+            <li class="nav-item"><a href="#seccion5" class="nav-item-link">Deteccion de conexión</a></li>
+            <li class="nav-item"><a href="#seccion6" class="nav-item-link">Deteccion de camaraweb</a></li>
+            <li class="nav-item"><a href="#seccion7" class="nav-item-link">Geolocalización</a></li>
+            <li class="nav-item"><a href="#seccion8" class="nav-item-link">Filtros de Búsquedas</a></li>
         </ul>
     </nav>
     <div class="articles">
@@ -31,11 +35,13 @@
                 <button id="btn-detener-alarma"class="btn-reloj">Detener Alarma</button>
             </div>
         </article>
+
         <article id="seccion2">
             <h1 class="titulo">Responsive Design</h1>
             <div id="youtube"></div>
             <div id="gmapa"></div>
         </article>
+
         <article id="seccion3">
             <h1 class="titulo">Responsive Terter</h1>
             <br>
@@ -49,11 +55,57 @@
                 <input name="probar" type="submit" value="Probar">
                 <input name="cerrar" type="button" value="Cerrar">
             </form>
-
         </article>
+
         <article id="seccion4">
             <h1 class="titulo">Detección de dispositivos</h1>
-            <div id="user-device"></div>
+            <div data-dark id="user-device"></div>
+        </article>
+
+        <article id="seccion5">
+            <h1 class="titulo">Detección de conexión</h1>
+        </article>
+
+        <article id="seccion6">
+            <h1 class="titulo">Detección de camara web</h1>
+            <video id="webcam"></video>
+        </article>
+
+        <article id="seccion7">
+            <h1 class="titulo">Geolocalización</h1>
+            <div id="geolocation">    
+            </div>
+        </article>
+
+        <article id="seccion8">
+            <h1 class="titulo">Filtro de Búsqueda</h1>
+            <input type="search" placeholder="Buscar..." class="card-filter">
+            <article class="cards">
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/animals" alt="Animals">
+                    <figcaption>Animals</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/tech" alt="Tech">
+                    <figcaption>Tech</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/nature" alt="Nature">
+                    <figcaption>Nature</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/people" alt="People">
+                    <figcaption>People</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/arch" alt="Architecture">
+                    <figcaption>Architecture</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/any" alt="Any">
+                    <figcaption>Any</figcaption>
+                </figure>
+            </article>
         </article>
     </div>
     
